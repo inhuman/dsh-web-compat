@@ -1,0 +1,4 @@
+# dsh-web-compat — one row for the host shim; the client half rides the same row.
+- insert:
+    - id: web-compat
+      name: '@inhuman/dsh-web-compat'

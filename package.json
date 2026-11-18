@@ -1,0 +1,40 @@
+{
+  "name": "@inhuman/dsh-web-compat",
+  "version": "0.0.1",
+  "description": "Two compatibility shims for DeepSeek Harness Web: crypto.randomUUID over plain HTTP on a LAN address, and the connection request fence older plugin releases call.",
+  "type": "module",
+  "license": "MIT",
+  "author": "inhuman",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "compat"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "dsh": ">=0.2.2-rc.2"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [],
+      "platform": "web"
+    }
+  }
+}
